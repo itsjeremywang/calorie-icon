@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6ee7a0"/>
+      <stop offset="1" stop-color="#16a34a"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#f1c98f"/>
+      <stop offset="1" stop-color="#d49a5c"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background (iOS rounds the corners itself) -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <circle cx="256" cy="270" r="215" fill="#ffffff" opacity="0.14"/>
+
+  <!-- arms, drawn behind the body: dark outline pass, then skin pass. Right arm is the mirror image. -->
+  <g id="arm">
+    <g fill="none" stroke="#7a4a22" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M150 300 L84 306 L76 214" stroke-width="64"/>
+    </g>
+    <circle cx="112" cy="272" r="33" fill="#7a4a22"/>
+    <circle cx="74" cy="196" r="35" fill="#7a4a22"/>
+    <g fill="none" stroke="#e2ac6b" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M150 300 L84 306 L76 214" stroke-width="50"/>
+    </g>
+    <circle cx="112" cy="272" r="28" fill="#e2ac6b"/>
+    <circle cx="74" cy="196" r="30" fill="#e2ac6b"/>
+    <!-- bicep highlight and fist knuckles -->
+    <path d="M96 262 Q112 248 128 264" fill="none" stroke="#b97a3d" stroke-width="5" stroke-linecap="round"/>
+    <path d="M60 190 Q74 182 88 190 M64 204 Q74 210 84 204" fill="none" stroke="#b97a3d" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <use href="#arm" transform="translate(512 0) scale(-1 1)"/>
+
+  <!-- feet -->
+  <ellipse cx="212" cy="452" rx="34" ry="19" fill="#7a4a22"/>
+  <ellipse cx="300" cy="452" rx="34" ry="19" fill="#7a4a22"/>
+
+  <!-- body -->
+  <path d="M256 104 C344 100 388 186 386 286 C384 386 338 442 256 444 C174 442 128 386 126 286 C124 186 168 108 256 104 Z"
+        fill="url(#shine)" stroke="#7a4a22" stroke-width="9" stroke-linejoin="round"/>
+
+  <!-- potato spots -->
+  <g fill="#b9823f" opacity="0.8">
+    <ellipse cx="176" cy="160" rx="9" ry="6" transform="rotate(-20 176 160)"/>
+    <ellipse cx="338" cy="150" rx="8" ry="5.5" transform="rotate(25 338 150)"/>
+    <ellipse cx="300" cy="118" rx="6" ry="4"/>
+    <ellipse cx="160" cy="232" rx="6" ry="4"/>
+    <ellipse cx="354" cy="236" rx="7" ry="4.5"/>
+  </g>
+
+  <!-- face -->
+  <g>
+    <path d="M200 182 Q222 168 244 180" fill="none" stroke="#5a3515" stroke-width="7" stroke-linecap="round"/>
+    <path d="M268 180 Q290 168 312 182" fill="none" stroke="#5a3515" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="224" cy="212" rx="20" ry="23" fill="#fff" stroke="#5a3515" stroke-width="4"/>
+    <ellipse cx="288" cy="212" rx="20" ry="23" fill="#fff" stroke="#5a3515" stroke-width="4"/>
+    <circle cx="228" cy="214" r="11" fill="#2b1a0b"/>
+    <circle cx="292" cy="214" r="11" fill="#2b1a0b"/>
+    <circle cx="232" cy="209" r="4" fill="#fff"/>
+    <circle cx="296" cy="209" r="4" fill="#fff"/>
+    <circle cx="190" cy="250" r="14" fill="#f08a8a" opacity="0.55"/>
+    <circle cx="322" cy="250" r="14" fill="#f08a8a" opacity="0.55"/>
+    <path d="M226 246 Q256 296 286 246 Z" fill="#8a2f2f" stroke="#5a3515" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M238 268 Q256 258 274 268 Q256 286 238 268 Z" fill="#ef7f7f"/>
+  </g>
+
+  <!-- abs: six-pack -->
+  <g fill="#f0cf9c" stroke="#a56a30" stroke-width="4">
+    <rect x="206" y="306" width="46" height="32" rx="12"/>
+    <rect x="260" y="306" width="46" height="32" rx="12"/>
+    <rect x="206" y="344" width="46" height="32" rx="12"/>
+    <rect x="260" y="344" width="46" height="32" rx="12"/>
+    <rect x="210" y="382" width="42" height="30" rx="12"/>
+    <rect x="260" y="382" width="42" height="30" rx="12"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.6">
+    <path d="M214 316 Q220 312 228 312"/>
+    <path d="M268 316 Q274 312 282 312"/>
+  </g>
+</svg>
