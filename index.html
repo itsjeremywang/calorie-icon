@@ -16,12 +16,18 @@
   </style>
 </head>
 <body>
-  <p id="msg">Opening Calories…</p>
+  <div id="msg" style="text-align:center;padding:24px">
+    <img src="apple-touch-icon.png" width="120" height="120" style="border-radius:27px" alt="">
+    <p><strong>Calories</strong></p>
+    <p>Tap the Share button, then <strong>Add to Home Screen</strong>.</p>
+    <p><a id="open" href="#">Open the app now</a></p>
+  </div>
   <script>
-    // Paste the web app URL from Apps Script (Deploy > Manage deployments), ending in /exec.
     var APP_URL = 'https://script.google.com/macros/s/AKfycbwh-Xc5yes-4ln-gzqxQBYuNygjKVpoWdAx7O1l1meZVRRXuM8tDbLStrMbb8grz39L0w/exec';
-    if (APP_URL.indexOf('https://') === 0) location.replace(APP_URL);
-    else document.getElementById('msg').textContent = 'Set APP_URL in index.html first.';
+    document.getElementById('open').href = APP_URL;
+    // Launched from the Home Screen: go straight to the app. In a normal browser tab, stay here so
+    // "Add to Home Screen" saves this page (and its potato icon), not Google's.
+    if (window.navigator.standalone) location.replace(APP_URL);
   </script>
 </body>
 </html>
